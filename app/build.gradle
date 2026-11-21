@@ -1,0 +1,42 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'org.talkingtv'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'org.talkingtv'
+        minSdk 26
+        targetSdk 35
+        versionCode Integer.parseInt(System.getenv('VERSION_CODE') ?: '1')
+        versionName '0.1.' + (System.getenv('VERSION_CODE') ?: '0')
+    }
+
+    signingConfigs {
+        // A public, shared signing key so every build can update the last one
+        // when sideloaded. Use a private key for the Play Store later.
+        shared {
+            storeFile file('talkingtv-public.keystore')
+            storePassword 'talkingtv'
+            keyAlias 'talkingtv'
+            keyPassword 'talkingtv'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.shared
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.shared
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}

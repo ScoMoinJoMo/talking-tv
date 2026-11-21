@@ -1,0 +1,28 @@
+{
+  "speechRate": 1.0,
+  "digitWaitMs": 1800,
+
+  "genie": {
+    "serverIp": "",
+    "clientAddr": "",
+    "comment": "serverIp = the HS17's address, e.g. 192.168.1.50. clientAddr = this room's Genie Mini (find it with 'Find Genie Minis' on the setup page)."
+  },
+
+  "tvInput": {
+    "method": "tvview",
+    "hdmiPort": 1,
+    "inputId": "",
+    "braviaIp": "127.0.0.1",
+    "braviaPsk": "",
+    "comment": "method: tvview (show the Mini inside this app, best), intent (hand off to the TV's own input), bravia (Sony IP control), or none."
+  },
+
+  "favorites": [
+    { "name": "ESPN", "type": "genie", "channel": 206, "number": "" },
+    { "name": "MSNOW", "type": "genie", "channel": 356, "number": "" },
+    { "name": "ESPN on YouTube TV", "type": "youtubetv", "url": "", "number": "1" },
+    { "name": "YouTube TV", "type": "app", "package": "com.google.android.youtube.tvunplugged", "number": "" },
+    { "name": "Netflix", "type": "app", "package": "com.netflix.ninja", "number": "" },
+    { "name": "Paramount Plus", "type": "app", "package": "com.cbs.ott", "number": "" }
+  ]
+}

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- Shows the Genie Mini's HDMI picture inside the app, so the remote keeps working here. -->
+    <android.media.tv.TvView
+        android:id="@+id/tv_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/tv_picture"
+        android:focusable="false"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/panel"
+        android:layout_width="760dp"
+        android:layout_height="match_parent"
+        android:background="@color/panel"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:accessibilityHeading="true"
+            android:paddingBottom="12dp"
+            android:text="@string/favorites_heading"
+            android:textColor="#FFD400"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/favorites"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="6dp"
+            android:drawSelectorOnTop="false"
+            android:listSelector="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:accessibilityLiveRegion="polite"
+            android:paddingTop="12dp"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/setup_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F2000000"
+        android:focusable="true"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:padding="64dp"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:visibility="gone" />
+</FrameLayout>

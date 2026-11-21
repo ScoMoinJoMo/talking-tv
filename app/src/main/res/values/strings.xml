@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Talking TV</string>
+    <string name="favorites_heading">Favorites</string>
+    <string name="tv_picture">TV picture</string>
+</resources>
